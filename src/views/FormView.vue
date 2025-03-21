@@ -108,7 +108,9 @@ const checkValue = (field) => {
 // Очистка формы
 const clearForm = () => {
   userData.value.forEach((field) => {
-    field.value = field.hasError = field.errorText = null;
+    field.value = ''
+    field.hasError = field.touch = field.errorText = null;
+    checkValue(field)
   })
 }
 
